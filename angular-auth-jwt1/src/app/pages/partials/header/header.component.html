@@ -1,0 +1,25 @@
+<div class="content">
+  <p>header works!</p>
+
+  <div id="container">
+    <div *ngIf="(currentUser$ | async) as user">
+      <p *ngIf="user.isLogged">Vous êtes connecté avec l'email : {{user.email}} ! <a href="#"  (click)="logout()"><b>déconnexion</b></a></p>
+      <p *ngIf="!user.isLogged">Vous n'êtes pas connecté !</p>
+
+      <ul>
+        <li><a [routerLink]="['/home']">home</a></li>
+        <li><a [routerLink]="['/page1']">page 1 - les produits</a></li>
+        <li><a [routerLink]="['/page2']">page 2</a></li>
+        <li *ngIf="!user.isLogged"><a [routerLink]="['/login']">se connecter</a></li>
+        <li *ngIf="!user.isLogged"><a [routerLink]="['/register']">s'inscrire</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p *appHasRole="[RoleEnum.ADMIN]">Vous avez le rôle ADMIN</p>
+      <p *appHasRole="[RoleEnum.USER]">Vous avez le rôle USER</p>
+      <p *appHasRole="[RoleEnum.USER, RoleEnum.ADMIN]">Vous avez le rôle USER et/ou ADMIN</p>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,7 @@
+FROM node:12-alpine
+WORKDIR /root/
+COPY ./angular-auth-jwt1 /root/angular-auth-jwt1
+WORKDIR /root/angular-auth-jwt1
+RUN npm install
+EXPOSE 5600 49153
+CMD npm run start-hr

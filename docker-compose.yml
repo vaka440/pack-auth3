@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+
+  nestjs:
+    container_name: api-nestjs
+    ports: 
+      - 3000:3000
+    depends_on:
+      - db
+    build: 
+      context: ./api-nestjs
+    volumes: 
+      - ./api-nestjs:/app
+      - /app/node_modules
+      - /app/dist
+    env_file: ./api-nestjs/.env
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  adminer:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - 5050:80
+
+  ng-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.ng-app
+    image: pack_auth3/angular-auth-jwt1:latest
+    volumes:
+      - ./angular-auth-jwt1/src:/root/angular-auth-jwt1/src
+    ports:
+      - "5600:4200"
+      - "49153:49153"
+    restart: always
+    container_name: angular-auth-jwt1
+    depends_on:
+      - nestjs    
+
+volumes:
+  pgdata:

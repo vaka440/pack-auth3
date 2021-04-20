@@ -1,0 +1,15 @@
+<p>page1 works!</p>
+
+<div id="container" *ngIf="isLogged$ | async else notlogged">
+  <ng-container *ngIf="products$">
+    <mat-card *ngFor="let item of products$ | async">
+      <p><b>{{item.name}}</b></p>
+      <p>prix : {{item.cost}}</p>
+      <p>quantité : {{item.quantity}}</p>
+    </mat-card>
+  </ng-container>
+</div>
+
+<ng-template #notlogged >
+  <p>Vous n'êtes pas connecté !</p>
+</ng-template>

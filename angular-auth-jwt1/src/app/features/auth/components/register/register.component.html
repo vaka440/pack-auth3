@@ -1,0 +1,62 @@
+<p>register works!</p>
+
+<div id="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>email</mat-label>
+        <input matInput placeholder = "Entrez votre email" formControlName = "email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <mat-error *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required">L'email est <strong>obligatoire</strong></div>
+          <div *ngIf="f.email.errors.email">L'email doit être dans un format valide</div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div style="height: 12px;"></div>
+
+    <div>
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput #password placeholder = "Entrez votre email" formControlName = "password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <mat-hint>{{password.value?.length || 0}} caractère(s) (6 minimum)</mat-hint>
+        <mat-error *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required">Le mot de passe est <strong>obligatoire</strong></div>
+          <div *ngIf="f.password.errors.minlength">Le mot de passe doit contenir au moins 6 caractères</div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div style="height: 12px;"></div>
+
+    <div>
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Confirme Password</mat-label>
+        <input matInput placeholder = "Entrez votre email" formControlName = "confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }">
+        <mat-error *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+          <div *ngIf="f.confirmPassword.errors.required">La confirmation est <strong>obligatoire</strong></div>
+          <div *ngIf="f.confirmPassword.errors.mustMatch">Les mots de passe sont différents</div>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div style="height: 24px;"></div>
+
+    <div>
+      <button mat-raised-button color="accent" type="reset" (click)="onReset()">Annuler</button>
+      &nbsp;
+      <button mat-raised-button color="primary" type="submit">Inscription</button>
+    </div>
+
+    <div *ngIf="error">
+      <div style="height: 24px;"></div>
+
+      <mat-error  class="invalid-feedback">
+        <div>{{error}}</div>
+      </mat-error>
+    </div>
+
+  </form>
+</div>
