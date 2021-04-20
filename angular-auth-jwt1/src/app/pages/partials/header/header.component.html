@@ -8,8 +8,8 @@
 
       <ul>
         <li><a [routerLink]="['/home']">home</a></li>
-        <li><a [routerLink]="['/page1']">page 1 - les produits</a></li>
-        <li><a [routerLink]="['/page2']">page 2</a></li>
+        <li><a [routerLink]="['/page1']">page 1 - les produits (affichage des produits si connecté)</a></li>
+        <li><a [routerLink]="['/page2']">page 2 (accès autorisé si connecté)</a></li>
         <li *ngIf="!user.isLogged"><a [routerLink]="['/login']">se connecter</a></li>
         <li *ngIf="!user.isLogged"><a [routerLink]="['/register']">s'inscrire</a></li>
       </ul>
