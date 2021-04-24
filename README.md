@@ -291,7 +291,7 @@ main.ts
 ...
 ```  
 
-accès à swagger fait avec cette grosse merde de React :
+accès à swagger :
 
 http://localhost:3000/swagger-api/
 
