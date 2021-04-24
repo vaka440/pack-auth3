@@ -327,7 +327,7 @@ exemple avec AuthModule:
       signOptions: { expiresIn: process.env.EXPIRES_IN },
     }),     
 
-    UserModule,                                                     // ce module aura besoin du module : UserModule 
+    UserModule,                                                     // importer les modules que l'on a besoin 
                                                                     // pour la connexion et l'enregistrement d'un utilisateur
   ],  
   controllers: [AuthController,],                                   // déclarer ici les controleurs qui doivent être prises en compte 
