@@ -13,7 +13,7 @@ export class LoginRequest {
 
 export class RegisterRequest {
   @IsNotEmpty({ message: 'An email is required' })
-  @MinLength(4, { message: 'Your email must be at least 6 characters' })    
+  @MinLength(6, { message: 'Your email must be at least 6 characters' })    
   @IsEmail({}, { message: 'Your email is invalid' })    
   readonly email: string
 
