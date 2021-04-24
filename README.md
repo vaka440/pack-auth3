@@ -1,6 +1,25 @@
-### Nestjs role user auth
+# front : Angular + back : Nestjs 
 
-#### Features:
+# NestJS
+
+NEST EST UN CADRE PERMETTANT DE CRÉER DES APPLICATIONS NODE.JS EFFICACES ET ÉVOLUTIVES CÔTÉ SERVEUR.  
+IL UTILISE LE JAVASCRIPT MODERNE, EST CONSTRUIT AVEC TYPESCRIPT (PRÉSERVE LA COMPATIBILITÉ AVEC LE JAVASCRIPT PUR) ET COMBINE DES ÉLÉMENTS DE OOP, FP, ET FRP.  
+
+- pour la conception d'une api rest, de microservices, serveur d'authentification...
+- est basé sur TypeScript, Node.js, Express
+- un cadre très bien conçu (MVC...)
+- le tout sous la forme simple et légère (utilisation de décorateurs...)
+
+
+## description :
+
+- Dependency injection container
+- Modularisation 
+- Testability 
+- Written in TypeScript
+
+
+## Features:
 
 1. Login with passing username and password. Username - unique, password - hashed.
 2. CRUD for User Entity.
@@ -8,14 +27,14 @@
 4. Role based auth - login - public route, me - only for logged users, and other routes for admin role.
 5. Swagger OpenAPI
 
-#### Lancement :
+## Lancement :
 
 ```
 cd pack-auth3
 docker-compose up -d --build
 ```
 
-#### 4 containers Docker :  
+## 4 containers Docker :  
 
 - l'application Angular : http://localhost:5600  
 - le swagger de l'api NestJS : http://localhost:3000/swagger-api/  
@@ -26,6 +45,8 @@ docker-compose up -d --build
 # Les requêtes
 
 ## Les différents décorateurs dans les controlleurs
+
+On classe le code par thème et par url dans des classes controlleurs
 
 ### auth.controller.ts, user.controller.ts, product.controller.ts :
 
