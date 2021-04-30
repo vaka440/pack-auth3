@@ -41,7 +41,7 @@ docker-compose up -d --build
 - api NestJS : http://localhost:3000
 - le swagger de l'api NestJS : http://localhost:3000/swagger-api/  
 - adminer, le phpmyadmin pour postgre : http://localhost:5050 user: admin@admin.com password: root  
-- la base de donnée postgre
+- la base de données postgre
 
 
 # Les requêtes
