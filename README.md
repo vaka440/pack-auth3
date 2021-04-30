@@ -235,7 +235,7 @@ EXPIRES_IN=5m
 
 - EXPIRES_IN ---------> le temps d'expiration du token  
 
-## la base de donnée
+## la base de données
 
 renommer : ```ormconfig.json``` en ```ormconfig.json.back```
 car on utilise le ```.env```
