@@ -9,6 +9,7 @@ IL UTILISE LE JAVASCRIPT MODERNE, EST CONSTRUIT AVEC TYPESCRIPT (PRÉSERVE LA CO
 - est basé sur TypeScript, Node.js, Express
 - un cadre très bien conçu (MVC...)
 - le tout sous la forme simple et légère (utilisation de décorateurs...)
+- on peut installer et utiliser n'importe quel package node.js
 
 
 ## description :
