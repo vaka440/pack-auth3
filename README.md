@@ -352,9 +352,11 @@ const BASE_OPTIONS: SignOptions = {
 je n'ai pas compris à quoi sert : BASE_OPTIONS  
 
 
-===
+-----
+
 # liste des décorateurs
 
+```
 @ApiOkResponse()
 @ApiCreatedResponse()
 @ApiAcceptedResponse()
@@ -379,6 +381,7 @@ je n'ai pas compris à quoi sert : BASE_OPTIONS
 @ApiServiceUnavailableResponse()
 @ApiGatewayTimeoutResponse()
 @ApiDefaultResponse()
+```
 
 # exemple 1
 
