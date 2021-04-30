@@ -37,6 +37,7 @@ docker-compose up -d --build
 ## 4 containers Docker :  
 
 - l'application Angular : http://localhost:5600  
+- api NestJS : http://localhost:3000
 - le swagger de l'api NestJS : http://localhost:3000/swagger-api/  
 - adminer, le phpmyadmin pour postgre : http://localhost:5050 user: admin@admin.com password: root  
 - la base de donnée postgre
