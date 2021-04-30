@@ -352,14 +352,20 @@ const BASE_OPTIONS: SignOptions = {
 
 je n'ai pas compris à quoi sert : BASE_OPTIONS  
 
+-----
+-----
+-----
+-----
 
 -----
 -----
 # Nest  Cli
 
+```
 npm install -g @nestjs/cli
 nest --help
 nest generate --help
+```
 
 -----
 -----
