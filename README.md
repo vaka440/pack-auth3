@@ -353,6 +353,9 @@ je n'ai pas compris à quoi sert : BASE_OPTIONS
 
 
 -----
+-----
+-----
+-----
 
 # liste des décorateurs
 
@@ -385,7 +388,7 @@ je n'ai pas compris à quoi sert : BASE_OPTIONS
 
 # exemple 1
 
-POST /cats  BODY {}
+POST /cats  BODY { id: 3, name: 'matou', ...
 
 CreateCatDto.ts
 
