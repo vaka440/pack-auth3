@@ -351,3 +351,63 @@ const BASE_OPTIONS: SignOptions = {
 
 je n'ai pas compris à quoi sert : BASE_OPTIONS  
 
+
+===
+# liste des décorateurs
+
+@ApiOkResponse()
+@ApiCreatedResponse()
+@ApiAcceptedResponse()
+@ApiNoContentResponse()
+@ApiMovedPermanentlyResponse()
+@ApiBadRequestResponse()
+@ApiUnauthorizedResponse()
+@ApiNotFoundResponse()
+@ApiForbiddenResponse()
+@ApiMethodNotAllowedResponse()
+@ApiNotAcceptableResponse()
+@ApiRequestTimeoutResponse()
+@ApiConflictResponse()
+@ApiTooManyRequestsResponse()
+@ApiGoneResponse()
+@ApiPayloadTooLargeResponse()
+@ApiUnsupportedMediaTypeResponse()
+@ApiUnprocessableEntityResponse()
+@ApiInternalServerErrorResponse()
+@ApiNotImplementedResponse()
+@ApiBadGatewayResponse()
+@ApiServiceUnavailableResponse()
+@ApiGatewayTimeoutResponse()
+@ApiDefaultResponse()
+
+# exemple 1
+
+POST /cats  BODY {}
+
+CreateCatDto.ts
+
+```ts
+export class Cat {
+  @ApiProperty()
+  id: number;
+
+  @ApiProperty()
+  name: string;
+  ...
+  ...
+```  
+  
+```ts
+@ApiTags('cats')
+@Controller('cats')
+export class CatsController {
+
+  @Post()
+  @ApiResponse({ status: 201, description: 'The record has been successfully created.', type: Cat,})
+  @ApiResponse({ status: 403, description: 'Forbidden.'})  
+  async create(@Body() createCatDto: CreateCatDto): Promise<Cat> {
+    return this.catsService.create(createCatDto);
+  }
+}
+```
+
