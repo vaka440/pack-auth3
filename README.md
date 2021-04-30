@@ -10,6 +10,7 @@ IL UTILISE LE JAVASCRIPT MODERNE, EST CONSTRUIT AVEC TYPESCRIPT (PRÉSERVE LA CO
 - un cadre très bien conçu (MVC...)
 - le tout sous la forme simple et légère (utilisation de décorateurs...)
 - on peut installer et utiliser n'importe quel package node.js
+- Nest CLI
 
 
 ## description :
@@ -354,6 +355,12 @@ je n'ai pas compris à quoi sert : BASE_OPTIONS
 
 -----
 -----
+# Nest  Cli
+
+npm install -g @nestjs/cli
+nest --help
+nest generate --help
+
 -----
 -----
 
