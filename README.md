@@ -32,6 +32,11 @@ IL UTILISE LE JAVASCRIPT MODERNE, EST CONSTRUIT AVEC TYPESCRIPT (PRÉSERVE LA CO
 ## Lancement :
 
 ```
+/angular-auth-jwt1
+/
+npm i
+
+
 cd pack-auth3
 docker-compose up -d --build
 ```
