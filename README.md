@@ -33,6 +33,7 @@ IL UTILISE LE JAVASCRIPT MODERNE, EST CONSTRUIT AVEC TYPESCRIPT (PRÉSERVE LA CO
 
 ```
 /angular-auth-jwt1
+npm i
 /api-nestjs
 npm i
 
